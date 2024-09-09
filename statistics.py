@@ -1,9 +1,10 @@
-import math
+"""statistic file"""
+from math import sqrt, ceil
 
 
 def average(data):
     """Return the average of a list of numeric values in data."""
-    if len(data)==0:
+    if len(data) == 0:
         raise ValueError("List must contain at least one value")
     return sum(data)/len(data)
 
@@ -33,14 +34,14 @@ def variance(data):
     4.0
     """
     # ugly code.
-    n=len(data)
-    if n==0:
+    n = len(data)
+    if n == 0:
         raise ValueError("List must contain at least one value")
     avg = average(data)
-    return math.ceil(sum( [(x-avg)**2 for x in data] )/n)
+    return ceil(sum([(x - avg)**2 for x in data])/n)
 
 
 def stdev(data):
     """the standard deviation of a list of values"""
-    return math.sqrt(variance(data))
+    return sqrt(variance(data))
 
