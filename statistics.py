@@ -1,3 +1,4 @@
+"""statistic file."""
 from math import sqrt, ceil
 
 
@@ -43,5 +44,3 @@ def variance(data):
 def stdev(data):
     """The standard deviation of a list of values."""
     return sqrt(variance(data))
-
-
