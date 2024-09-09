@@ -1,4 +1,4 @@
-"""statistic file."""
+"""Statistic File."""
 from math import sqrt, ceil
 
 
