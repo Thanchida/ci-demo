@@ -1,4 +1,3 @@
-"""statistic file."""
 from math import sqrt, ceil
 
 
@@ -10,7 +9,7 @@ def average(data):
 
 
 def variance(data):
-    """the population variance of a list of numbers in data.
+    """The population variance of a list of numbers in data.
 
     The variance is the sum of squared differences between data values
     and their mean, divided by the number of items in the list.
@@ -42,7 +41,7 @@ def variance(data):
 
 
 def stdev(data):
-    """the standard deviation of a list of values."""
+    """The standard deviation of a list of values."""
     return sqrt(variance(data))
 
 
