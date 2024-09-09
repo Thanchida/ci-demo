@@ -37,7 +37,7 @@ def variance(data):
     if n==0:
         raise ValueError("List must contain at least one value")
     avg = average(data)
-    return sum( [(x-avg)**2 for x in data] )/n
+    return math.ceil(sum( [(x-avg)**2 for x in data] )/n)
 
 
 def stdev(data):
