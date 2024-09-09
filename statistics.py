@@ -3,14 +3,14 @@ from math import sqrt, ceil
 
 
 def average(data):
-    """Return the average of a list of numeric values in data."""
+    """Calculate the average of a list of numeric values in data."""
     if len(data) == 0:
         raise ValueError("List must contain at least one value")
     return sum(data)/len(data)
 
 
 def variance(data):
-    """The population variance of a list of numbers in data.
+    """Calculate the population variance of a list of numbers in data.
 
     The variance is the sum of squared differences between data values
     and their mean, divided by the number of items in the list.
