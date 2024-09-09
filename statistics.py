@@ -1,5 +1,5 @@
 """Statistic File."""
-from math import sqrt, ceil
+from math import sqrt
 
 
 def average(data):
