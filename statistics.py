@@ -33,14 +33,13 @@ def variance(data):
     >>> variance([1000000, 1000004])
     4.0
     """
-    # ugly code.
     n = len(data)
     if n == 0:
         raise ValueError("List must contain at least one value")
     avg = average(data)
-    return ceil(sum([(x - avg)**2 for x in data])/n)
+    return sum([(x - avg)**2 for x in data])/n
 
 
 def stdev(data):
-    """The standard deviation of a list of values."""
+    """Calculate the standard deviation of a list of values."""
     return sqrt(variance(data))
