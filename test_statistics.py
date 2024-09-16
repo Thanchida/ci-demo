@@ -1,5 +1,5 @@
 from unittest import TestCase
-from statistics import variance, stdev
+from statistics import variance, stdev, average
 from math import sqrt
 
 class StatisticsTest(TestCase):
@@ -24,6 +24,16 @@ class StatisticsTest(TestCase):
         self.assertEqual(2.0, stdev([1, 5]))
         # variance([0, 0.5, 1, 1.5, 2.0]) is 0.5
         self.assertEqual(sqrt(0.5), stdev([0, 0.5, 1, 1.5, 2]))
+
+    def test_cannot_find_average_if_data_is_zero(self):
+        with self.assertRaises(ValueError) as context:
+            average(data=[])
+        self.assertEqual(str(context.exception), "List must contain at least one value")
+
+    def test_cannot_find_variance_if_data_is_zero(self):
+        with self.assertRaises(ValueError) as context:
+            variance(data=[])
+        self.assertEqual(str(context.exception), "List must contain at least one value")
 
 
 if __name__ == '__main__':
