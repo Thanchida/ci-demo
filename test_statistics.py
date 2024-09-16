@@ -2,6 +2,7 @@ from unittest import TestCase
 from statistics import variance, stdev, average
 from math import sqrt
 
+
 class StatisticsTest(TestCase):
 
     def test_variance_typical_values(self):
@@ -35,8 +36,4 @@ class StatisticsTest(TestCase):
             variance(data=[])
         self.assertEqual(str(context.exception), "List must contain at least one value")
 
-
-if __name__ == '__main__':
-    import unittest
-    unittest.main(verbosity=1)
 
